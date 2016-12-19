@@ -28,8 +28,8 @@
 
      	if(lookAtPlayer){
 
-     		if(animation.IsPlaying("Worshipping")){
-     			animation.Play("LowerHands");
+     		if(GetComponent<Animation>().IsPlaying("Worshipping")){
+     			GetComponent<Animation>().Play("LowerHands");
      		}
 
 	         //find the vector pointing from our position to the target
