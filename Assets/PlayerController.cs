@@ -2,6 +2,9 @@
 
 public class PlayerController : MonoBehaviour
 {
+
+	public AudioSource audioSource;
+
 	void Update()
 	{
 		var x = Input.GetAxis("Horizontal") * Time.deltaTime * -3.0f;
@@ -15,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
 		if (other.transform.parent.gameObject.CompareTag ("Person"))
 		{
+
+			audioSource.Stop();
 
 			GameObject[] peopleToRotate = GameObject.FindGameObjectsWithTag("Person");
 
